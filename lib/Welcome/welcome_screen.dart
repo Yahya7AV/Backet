@@ -1,4 +1,5 @@
-﻿import 'package:backet/Welcome/login_screen.dart';
+﻿import 'package:backet/View/home_page.dart';
+import 'package:backet/Welcome/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -50,7 +51,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     backgroundColor:
                         MaterialStateProperty.all<Color>(Colors.white),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (c) => HomePage()));
+                  },
                   child: Row(
                     children: [
                       Icon(
